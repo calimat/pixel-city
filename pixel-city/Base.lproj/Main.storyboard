@@ -5,23 +5,89 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MapVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapVC" customModule="pixel_city" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xym-Z2-M0K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTW-Y7-P3J">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double-tap to drop a pin and view photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgL-cZ-O8t">
+                                        <rect key="frame" x="25" y="25" width="325" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="JPf-47-DaX"/>
+                                            <constraint firstAttribute="width" constant="325" id="nJK-O2-9FA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="J3P-ie-9H2"/>
+                                    <constraint firstItem="AgL-cZ-O8t" firstAttribute="centerY" secondItem="MTW-Y7-P3J" secondAttribute="centerY" id="Q3f-e9-WZi"/>
+                                    <constraint firstItem="AgL-cZ-O8t" firstAttribute="centerX" secondItem="MTW-Y7-P3J" secondAttribute="centerX" id="uOw-Gb-SL7"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRs-bA-Ul8">
+                                <rect key="frame" x="315" y="585" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="hH8-aG-Xec"/>
+                                    <constraint firstAttribute="height" constant="50" id="z8B-zG-ZhE"/>
+                                </constraints>
+                                <state key="normal" image="locationButton"/>
+                                <connections>
+                                    <action selector="centerMapBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SH5-6q-Lc4"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s0V-W9-Ga6">
+                                <rect key="frame" x="0.0" y="660" width="375" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="MTW-Y7-P3J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5ck-z2-lO4"/>
+                            <constraint firstItem="MTW-Y7-P3J" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="6fx-76-Mid"/>
+                            <constraint firstItem="Xym-Z2-M0K" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="80l-Wt-efn"/>
+                            <constraint firstItem="s0V-W9-Ga6" firstAttribute="top" secondItem="Xym-Z2-M0K" secondAttribute="bottom" id="8gd-So-Rak"/>
+                            <constraint firstItem="s0V-W9-Ga6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FBn-Mh-8b4"/>
+                            <constraint firstAttribute="trailing" secondItem="Xym-Z2-M0K" secondAttribute="trailing" id="GUx-kA-5o0"/>
+                            <constraint firstAttribute="trailing" secondItem="s0V-W9-Ga6" secondAttribute="trailing" id="HZT-he-h0g"/>
+                            <constraint firstItem="Xym-Z2-M0K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K9u-lR-5vK"/>
+                            <constraint firstAttribute="trailing" secondItem="kRs-bA-Ul8" secondAttribute="trailing" constant="10" id="Rb2-Hn-5r9"/>
+                            <constraint firstAttribute="bottom" secondItem="kRs-bA-Ul8" secondAttribute="bottom" constant="32" id="WX9-p4-frJ"/>
+                            <constraint firstAttribute="bottom" secondItem="s0V-W9-Ga6" secondAttribute="bottom" id="cBZ-2G-dJg"/>
+                            <constraint firstItem="MTW-Y7-P3J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hFY-Sj-D6i"/>
+                            <constraint firstAttribute="bottom" secondItem="Xym-Z2-M0K" secondAttribute="bottom" id="jNR-Et-07Y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Xym-Z2-M0K" id="r0o-E2-wX6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="locationButton" width="67" height="67"/>
+    </resources>
 </document>
