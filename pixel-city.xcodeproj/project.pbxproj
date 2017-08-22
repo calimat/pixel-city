@@ -12,9 +12,13 @@
 		F66188B11F4BB86E00B8E631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66188AF1F4BB86E00B8E631 /* Main.storyboard */; };
 		F66188B31F4BB86E00B8E631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66188B21F4BB86E00B8E631 /* Assets.xcassets */; };
 		F66188B61F4BB86E00B8E631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66188B41F4BB86E00B8E631 /* LaunchScreen.storyboard */; };
+		FA42771AC4EF29A5526C85F0 /* Pods_pixel_city.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60D27F9EDF6504B7FB7FCA8 /* Pods_pixel_city.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A60D27F9EDF6504B7FB7FCA8 /* Pods_pixel_city.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pixel_city.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B962EA1B3AE4E85F1246F6 /* Pods-pixel-city.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixel-city.release.xcconfig"; path = "Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city.release.xcconfig"; sourceTree = "<group>"; };
+		CB56E67C012F819629E57FBA /* Pods-pixel-city.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixel-city.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city.debug.xcconfig"; sourceTree = "<group>"; };
 		F66188A81F4BB86E00B8E631 /* pixel-city.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel-city.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66188AB1F4BB86E00B8E631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F66188AD1F4BB86E00B8E631 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA42771AC4EF29A5526C85F0 /* Pods_pixel_city.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00806707721DDC3807DBE2B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB56E67C012F819629E57FBA /* Pods-pixel-city.debug.xcconfig */,
+				C0B962EA1B3AE4E85F1246F6 /* Pods-pixel-city.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C1B12B9970DBA6E0CFF5B05E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A60D27F9EDF6504B7FB7FCA8 /* Pods_pixel_city.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F661889F1F4BB86E00B8E631 = {
 			isa = PBXGroup;
 			children = (
 				F66188AA1F4BB86E00B8E631 /* pixel-city */,
 				F66188A91F4BB86E00B8E631 /* Products */,
+				00806707721DDC3807DBE2B2 /* Pods */,
+				C1B12B9970DBA6E0CFF5B05E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F66188BA1F4BB86E00B8E631 /* Build configuration list for PBXNativeTarget "pixel-city" */;
 			buildPhases = (
+				F17D84E4D7271B12A38E6490 /* [CP] Check Pods Manifest.lock */,
 				F66188A41F4BB86E00B8E631 /* Sources */,
 				F66188A51F4BB86E00B8E631 /* Frameworks */,
 				F66188A61F4BB86E00B8E631 /* Resources */,
+				E138D8D950568AFD5238CCA0 /* [CP] Embed Pods Frameworks */,
+				C07D864E23FF5494F84D55C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,6 +188,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C07D864E23FF5494F84D55C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E138D8D950568AFD5238CCA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F17D84E4D7271B12A38E6490 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F66188A41F4BB86E00B8E631 /* Sources */ = {
@@ -303,6 +378,7 @@
 		};
 		F66188BB1F4BB86E00B8E631 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB56E67C012F819629E57FBA /* Pods-pixel-city.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AMLYNCKP6M;
@@ -317,6 +393,7 @@
 		};
 		F66188BC1F4BB86E00B8E631 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B962EA1B3AE4E85F1246F6 /* Pods-pixel-city.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AMLYNCKP6M;
