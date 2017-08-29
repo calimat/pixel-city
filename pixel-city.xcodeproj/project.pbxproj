@@ -12,6 +12,7 @@
 		F66188B11F4BB86E00B8E631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66188AF1F4BB86E00B8E631 /* Main.storyboard */; };
 		F66188B31F4BB86E00B8E631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66188B21F4BB86E00B8E631 /* Assets.xcassets */; };
 		F66188B61F4BB86E00B8E631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66188B41F4BB86E00B8E631 /* LaunchScreen.storyboard */; };
+		F672F4891F550A2A007A1E47 /* DropabblePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672F4881F550A2A007A1E47 /* DropabblePin.swift */; };
 		FA42771AC4EF29A5526C85F0 /* Pods_pixel_city.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60D27F9EDF6504B7FB7FCA8 /* Pods_pixel_city.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		F66188B21F4BB86E00B8E631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F66188B51F4BB86E00B8E631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F66188B71F4BB86E00B8E631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F672F4881F550A2A007A1E47 /* DropabblePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropabblePin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		F66188BE1F4BB96600B8E631 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F672F4881F550A2A007A1E47 /* DropabblePin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F66188AE1F4BB86E00B8E631 /* MapVC.swift in Sources */,
+				F672F4891F550A2A007A1E47 /* DropabblePin.swift in Sources */,
 				F66188AC1F4BB86E00B8E631 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +429,7 @@
 				F66188BC1F4BB86E00B8E631 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
